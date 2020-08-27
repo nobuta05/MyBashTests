@@ -1,5 +1,6 @@
 #!/bin/bash
-source ./common.sh
+SCRIPTDIR=$(cd $(dirname $0); pwd)
+source ${SCRIPTDIR}/common.sh
 
 assert_equals "echo 'huga'" "huga"
-assert_ok "cat test_hoge.sh"
+assert_ok "cat ${SCRIPTDIR}/test_hoge.sh"
